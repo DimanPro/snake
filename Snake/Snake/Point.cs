@@ -12,7 +12,7 @@ namespace Snake
         public int y;
         public char sym;
 
-        public Point ()
+        public Point()
         {
         }
 
@@ -32,7 +32,7 @@ namespace Snake
 
         public void Move(int offset, Direction direction)
         {
-            if(direction == Direction.RIGHT)
+            if (direction == Direction.RIGHT)
             {
                 x = x + offset;
             }
@@ -42,18 +42,18 @@ namespace Snake
             }
             else if (direction == Direction.UP)
             {
-                y = y + offset;
+                y = y - offset;
             }
             else if (direction == Direction.DOWN)
             {
-                y = y - offset;
+                y = y + offset;
             }
         }
 
         public void Draw()
         {
             Console.SetCursorPosition(x, y);
-            Console.WriteLine(sym);
+            Console.Write(sym);
         }
 
         public void Clear()
